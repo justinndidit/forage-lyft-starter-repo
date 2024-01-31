@@ -10,7 +10,7 @@ class Spindler_Battery(Battery):
         self.last_service_date = datetime.fromisoformat(str(last_service_date))
         self.current_date = datetime.fromisoformat(str(current_date))
     def needs_service(self):
-        return self.current_date.year - self.last_service_date.year > 2
+        return self.current_date.year - self.last_service_date.year > 3
         
     
 
