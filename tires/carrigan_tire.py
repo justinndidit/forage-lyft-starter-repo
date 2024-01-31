@@ -10,6 +10,8 @@ class Carrigan_Tire(Tire):
     def needs_service(self):
         pressure = 0
         for tire_pressure in self.tire_pressures:
-            pressure += tire_pressure
+            if tire_pressure >= 0.9:
+                return True
 
-        return pressure >= 0.9
+
+        return False
